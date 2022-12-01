@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+	
+  <ItemGroup>
+	<None Include="input\*.*">
+	  <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	</None>
+  </ItemGroup>
+	
+  <ItemGroup>
+    <Compile Include="Day1.fs" />
+    <Compile Include="Main.fs" />
+  </ItemGroup>
+
+</Project>
