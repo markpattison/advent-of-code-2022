@@ -16,3 +16,8 @@ header "Day 3"
 
 Day3.part1()
 Day3.part2()
+
+header "Day 4"
+
+Day4.part1()
+Day4.part2()
