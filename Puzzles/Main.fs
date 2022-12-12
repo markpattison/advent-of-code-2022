@@ -56,3 +56,8 @@ header "Day 11"
 
 Day11.part1()
 Day11.part2()
+
+header "Day 12"
+
+Day12.part1()
+Day12.part2()
