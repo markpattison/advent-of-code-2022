@@ -97,7 +97,12 @@ let header s = printfn "\n%s\n" s
 //Day19.part1()
 //Day19.part2()
 
-header "Day 20"
+// header "Day 20"
 
-Day20.part1()
-Day20.part2()
+// Day20.part1()
+// Day20.part2()
+
+header "Day 21"
+
+Day21.part1()
+Day21.part2()
