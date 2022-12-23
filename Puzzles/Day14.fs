@@ -36,16 +36,19 @@ let rockGrid =
     |> Array.iter (fun rp ->
         rp
         |> Array.windowed 2
-        |> Array.iter (fun [| (x1, y1); (x2, y2) |] ->
-            let dx = sign (x2 - x1)
-            let dy = sign (y2 - y1)
-            let mutable x, y = x1, y1
-            
-            while x <> x2 || y <> y2 do
-                arr.[x, y] <- true
-                x <- x + dx
-                y <- y + dy
-            arr.[x2, y2] <- true))
+        |> Array.iter (fun arr2 ->
+            match arr2 with
+            | [| (x1, y1); (x2, y2) |] ->
+                let dx = sign (x2 - x1)
+                let dy = sign (y2 - y1)
+                let mutable x, y = x1, y1
+                
+                while x <> x2 || y <> y2 do
+                    arr.[x, y] <- true
+                    x <- x + dx
+                    y <- y + dy
+                arr.[x2, y2] <- true
+            | _ -> failwith "error"))
     arr
 
 let part1() =
